@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{83604C5B-62AF-4629-8171-2E181DAB72EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Order</RootNamespace>
+    <AssemblyName>Order</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SiparisDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SiparisDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SiparisDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SiparisDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AddAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddAdmin.Designer.cs">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AddCreditCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddCreditCart.Designer.cs">
+      <DependentUpon>AddCreditCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Basket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Basket.Designer.cs">
+      <DependentUpon>Basket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CashPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CashPayment.Designer.cs">
+      <DependentUpon>CashPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CheckPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CheckPayment.Designer.cs">
+      <DependentUpon>CheckPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CreditCardPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CreditCardPayment.Designer.cs">
+      <DependentUpon>CreditCardPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerForAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerForAdmin.Designer.cs">
+      <DependentUpon>CustomerForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NewItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NewItem.designer.cs">
+      <DependentUpon>NewItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerMenu.Designer.cs">
+      <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerSign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerSign.Designer.cs">
+      <DependentUpon>CustomerSign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DAL.cs" />
+    <Compile Include="UI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\PaymentTips\Cash.cs" />
+    <Compile Include="Models\PaymentTips\Check.cs" />
+    <Compile Include="Models\PaymentTips\Credit.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\NewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NewOrder.Designer.cs">
+      <DependentUpon>NewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OnlineOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\OnlineOrder.Designer.cs">
+      <DependentUpon>OnlineOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OrderForAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\OrderForAdmin.Designer.cs">
+      <DependentUpon>OrderForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PassiveOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PassiveOrder.Designer.cs">
+      <DependentUpon>PassiveOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductTransactions.Designer.cs">
+      <DependentUpon>ProductTransactions.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\AddAdmin.resx">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AddCreditCart.resx">
+      <DependentUpon>AddCreditCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Basket.resx">
+      <DependentUpon>Basket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CashPayment.resx">
+      <DependentUpon>CashPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CheckPayment.resx">
+      <DependentUpon>CheckPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CreditCardPayment.resx">
+      <DependentUpon>CreditCardPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerForAdmin.resx">
+      <DependentUpon>CustomerForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NewItem.resx">
+      <DependentUpon>NewItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerMenu.resx">
+      <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerSign.resx">
+      <DependentUpon>CustomerSign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\NewOrder.resx">
+      <DependentUpon>NewOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\OnlineOrder.resx">
+      <DependentUpon>OnlineOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\OrderForAdmin.resx">
+      <DependentUpon>OrderForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PassiveOrder.resx">
+      <DependentUpon>PassiveOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductTransactions.resx">
+      <DependentUpon>ProductTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SiparisDataSet.xsc">
+      <DependentUpon>SiparisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SiparisDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SiparisDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SiparisDataSet.xss">
+      <DependentUpon>SiparisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SiparisDataSet1.xsc">
+      <DependentUpon>SiparisDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SiparisDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SiparisDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SiparisDataSet1.xss">
+      <DependentUpon>SiparisDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\50.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\100.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b416bb1d329096e0a67aba3907139c16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addbasket.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\10.jpeg" />
+    <Content Include="Resources\5.jpg" />
+    <None Include="Resources\store.ico" />
+    <None Include="Resources\addadmin.jpg" />
+    <Content Include="Resources\addproduct.jpeg" />
+    <None Include="Resources\basket.jpg" />
+    <Content Include="Resources\cardconfirmation.jpeg" />
+    <Content Include="Resources\cashpayment.jpeg" />
+    <Content Include="Resources\check.png" />
+    <None Include="Resources\producttrans.jpg" />
+    <None Include="Resources\signin.jpg" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\exit1.png" />
+    <Content Include="Resources\login.jpg" />
+    <None Include="Resources\loginb.jpg" />
+    <None Include="Resources\loginb1.jpg" />
+    <Content Include="Resources\minusTen.jpeg" />
+    <None Include="Resources\password.png" />
+    <None Include="Resources\neworder.png" />
+    <Content Include="Resources\PlusTen.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
